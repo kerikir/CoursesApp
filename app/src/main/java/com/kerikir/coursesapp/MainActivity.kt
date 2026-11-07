@@ -9,6 +9,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -304,8 +305,8 @@ fun ItemList() {
     val courses = listOf(
         CourseItem("Fullstack Web Development", "John Doe", 49, 4.8, R.drawable.pic1),
         CourseItem("Advanced UI/UX Masterclass", "Jane Smith", 39, 4.9, R.drawable.pic2),
-        CourseItem("Kotlin & Jetpack Compose", "Alex Johnson", 59, 4.7, R.drawable.pic3 ?: R.drawable.pic1),
-        CourseItem("Game Dev with Unity", "Chris Lee", 45, 4.6, R.drawable.pic4 ?: R.drawable.pic2)
+        CourseItem("Kotlin & Jetpack Compose", "Alex Johnson", 59, 4.7, R.drawable.pic1),
+        CourseItem("Game Dev with Unity", "Chris Lee", 45, 4.6, R.drawable.pic2)
     )
 
     LazyRow(
