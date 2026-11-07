@@ -449,35 +449,41 @@ fun MyBottomBar() {
 
     var selectedIndex by remember { mutableStateOf(0) }
 
-    BottomAppBar(
-        cutoutShape = CircleShape,
-        backgroundColor = AppColor.BgGray,
+    Surface(
+        color = AppColor.BgGray,
         elevation = 8.dp
     ) {
-        BottomNavigation(
+        BottomAppBar(
+            modifier = Modifier.navigationBarsPadding(),
+            cutoutShape = CircleShape,
             backgroundColor = AppColor.BgGray,
             elevation = 0.dp
         ) {
-            items.forEachIndexed { index, item ->
-                BottomNavigationItem(
-                    icon = {
-                        Image(
-                            painter = painterResource(id = item.icon),
-                            contentDescription = item.label,
-                            modifier = Modifier.size(24.dp),
-                            colorFilter = if (index == selectedIndex) {
-                                ColorFilter.tint(AppColor.Purple)
-                            } else {
-                                ColorFilter.tint(AppColor.TextGray)
-                            }
-                        )
-                    },
-                    label = { Text(text = item.label, fontSize = 10.sp) },
-                    selected = selectedIndex == index,
-                    onClick = { selectedIndex = index },
-                    selectedContentColor = AppColor.Purple,
-                    unselectedContentColor = AppColor.TextGray
-                )
+            BottomNavigation(
+                backgroundColor = AppColor.BgGray,
+                elevation = 0.dp
+            ) {
+                items.forEachIndexed { index, item ->
+                    BottomNavigationItem(
+                        icon = {
+                            Image(
+                                painter = painterResource(id = item.icon),
+                                contentDescription = item.label,
+                                modifier = Modifier.size(24.dp),
+                                colorFilter = if (index == selectedIndex) {
+                                    ColorFilter.tint(AppColor.Purple)
+                                } else {
+                                    ColorFilter.tint(AppColor.TextGray)
+                                }
+                            )
+                        },
+                        label = { Text(text = item.label, fontSize = 10.sp) },
+                        selected = selectedIndex == index,
+                        onClick = { selectedIndex = index },
+                        selectedContentColor = AppColor.Purple,
+                        unselectedContentColor = AppColor.TextGray
+                    )
+                }
             }
         }
     }
