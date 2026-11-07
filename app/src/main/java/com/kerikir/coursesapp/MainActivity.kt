@@ -7,13 +7,14 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.*
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,13 +37,11 @@ class MainActivity : ComponentActivity() {
         window.navigationBarColor = android.graphics.Color.TRANSPARENT
 
         setContent {
-            MaterialTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = Color.White
-                ) {
-                    MyUI()
-                }
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = Color.White
+            ) {
+                MyUI()
             }
         }
     }
@@ -78,7 +77,7 @@ data class BottomMenuItem(
 fun MyUI() {
     Scaffold(
         bottomBar = { MyBottomBar() },
-        containerColor = Color.White
+        backgroundColor = Color.White
     ) { innerPadding ->
         Column(
             modifier = Modifier
@@ -155,7 +154,7 @@ fun Banner() {
     ConstraintLayout(
         modifier = Modifier
             .fillMaxWidth()
-            .height(160dp)
+            .height(160.dp)
             .padding(horizontal = 16.dp, vertical = 16.dp)
             .background(AppColor.Purple, RoundedCornerShape(10.dp))
             .padding(16.dp)
@@ -305,11 +304,11 @@ fun ItemList() {
     val courses = listOf(
         CourseItem("Fullstack Web Development", "John Doe", 49, 4.8, R.drawable.pic1),
         CourseItem("Advanced UI/UX Masterclass", "Jane Smith", 39, 4.9, R.drawable.pic2),
-        CourseItem("Kotlin & Jetpack Compose", "Alex Johnson", 59, 4.7, R.drawable.pic1),
-        CourseItem("Game Dev with Unity", "Chris Lee", 45, 4.6, R.drawable.pic2)
+        CourseItem("Kotlin & Jetpack Compose", "Alex Johnson", 59, 4.7, R.drawable.pic3 ?: R.drawable.pic1),
+        CourseItem("Game Dev with Unity", "Chris Lee", 45, 4.6, R.drawable.pic4 ?: R.drawable.pic2)
     )
 
-    androidx.compose.foundation.lazy.LazyRow(
+    LazyRow(
         modifier = Modifier.fillMaxWidth(),
         contentPadding = PaddingValues(horizontal = 16.dp),
         horizontalArrangement = Arrangement.spacedBy(16.dp)
@@ -438,16 +437,16 @@ fun MyBottomBar() {
     var selectedIndex by remember { mutableStateOf(0) }
 
     BottomAppBar(
-        containerColor = AppColor.BgGray,
-        tonalElevation = 8.dp
+        cutoutShape = CircleShape,
+        backgroundColor = AppColor.BgGray,
+        elevation = 8.dp
     ) {
-        NavigationBar(
-            containerColor = AppColor.BgGray,
-            tonalElevation = 0.dp,
-            modifier = Modifier.fillMaxWidth()
+        BottomNavigation(
+            backgroundColor = AppColor.BgGray,
+            elevation = 0.dp
         ) {
             items.forEachIndexed { index, item ->
-                NavigationBarItem(
+                BottomNavigationItem(
                     icon = {
                         Image(
                             painter = painterResource(id = item.icon),
@@ -458,13 +457,8 @@ fun MyBottomBar() {
                     label = { Text(text = item.label, fontSize = 10.sp) },
                     selected = selectedIndex == index,
                     onClick = { selectedIndex = index },
-                    colors = NavigationBarItemDefaults.colors(
-                        selectedIconColor = AppColor.Purple,
-                        selectedTextColor = AppColor.Purple,
-                        unselectedIconColor = AppColor.TextGray,
-                        unselectedTextColor = AppColor.TextGray,
-                        indicatorColor = AppColor.LightPurple
-                    )
+                    selectedContentColor = AppColor.Purple,
+                    unselectedContentColor = AppColor.TextGray
                 )
             }
         }
