@@ -48,6 +48,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
 object AppColor {
     val Purple = Color(0xFF521C98)
     val LightPurple = Color(0xFFF0E9FA)
@@ -55,6 +56,7 @@ object AppColor {
     val TextGray = Color(0xFF8E8E8E)
     val OverlayBlack = Color(0x90000000)
 }
+
 
 data class CourseItem(
     val title: String,
@@ -64,15 +66,18 @@ data class CourseItem(
     val picUrl: Int
 )
 
+
 data class CategoryItem(
     val title: String,
     val icon: Int
 )
 
+
 data class BottomMenuItem(
     val label: String,
     val icon: Int
 )
+
 
 @Composable
 fun MyUI() {
@@ -96,6 +101,7 @@ fun MyUI() {
         }
     }
 }
+
 
 @Composable
 fun SearchRow() {
@@ -149,6 +155,7 @@ fun SearchRow() {
         }
     }
 }
+
 
 @Composable
 fun Banner() {
@@ -205,6 +212,7 @@ fun Banner() {
         )
     }
 }
+
 
 @Composable
 fun Categories() {
@@ -276,6 +284,7 @@ fun Categories() {
     }
 }
 
+
 @Composable
 fun PopularCoursesHeaded() {
     Row(
@@ -299,6 +308,7 @@ fun PopularCoursesHeaded() {
         )
     }
 }
+
 
 @Composable
 fun ItemList() {
@@ -425,6 +435,7 @@ fun ItemList() {
         }
     }
 }
+
 
 @Composable
 fun MyBottomBar() {
