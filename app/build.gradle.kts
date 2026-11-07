@@ -40,7 +40,6 @@ android {
 dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
@@ -54,6 +53,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    implementation(libs.androidx.compose.material)
     implementation(libs.androidx.constraintlayout.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.compose.material.icons.extended)
