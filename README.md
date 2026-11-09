@@ -39,18 +39,16 @@
 Ниже представлена демонстрация работы интерфейса приложения и навигации:
 
 <div align="center">
-  <img src="demo/app_demo.gif" alt="Демонстрация работы CoursesApp" width="300"/>
+  <img src="demo/CoursesApp.gif" alt="Демонстрация работы CoursesApp" width="300"/>
 </div>
-
-> *Примечание: Если GIF временно недоступен, вы можете ознакомиться со скриншотами ниже.*
 
 ---
 
 ## 📱 Скриншоты
 
-| Главный экран | Поиск курса в панели поиска | Смена раздела в панели навигации | Иконка приложения |
-| :---: | :---: | :---: | :---: |
-| <img src="screenshots/main_screen.png" width="200" alt="Главный экран"/> | <img src="screenshots/search_courses.png" width="200" alt="Поиск курса"/> | <img src="screenshots/navigation_tab.png" width="200" alt="Смена раздела"/> | <img src="screenshots/app_icon.png" width="150" alt="Иконка приложения"/> |
+| Главный экран |  Поиск курса в панели поиска | Смена раздела в панели навигации | Иконка приложения |
+| :---: |:---:| :---: | :---: |
+| <img src="screenshots/main_screen_course.png" width="200" alt="Главный экран"/> | <img src="screenshots/search_course.png" width="200" alt="Поиск курса"/> | <img src="screenshots/navigation_course.png" width="200" alt="Смена раздела"/> | <img src="screenshots/app_icon_course.png" width="150" alt="Иконка приложения"/> |
 
 ---
 
@@ -60,7 +58,7 @@
 2. **Edge-to-Edge & System Bars Insets**:
    - Приложение полностью разворачивается на весь экран (`WindowCompat.setDecorFitsSystemWindows(window, false)`).
    - Нижняя системная панель навигации плавно интегрирована с `BottomAppBar` через `Modifier.navigationBarsPadding()`.
-   - Прозрачный Status Bar с тёмными системными иконок для отличной читаемости на светлом фоне (`isAppearanceLightStatusBars = true`).
+   - Прозрачный Status Bar с тёмными системными иконками для отличной читаемости на светлом фоне (`isAppearanceLightStatusBars = true`).
 3. **ConstraintLayout Compose**: Сложные баннеры и карточки курсов со сложной привязкой элементов (заголовок, автор, цена, рейтинг) сверстаны с использованием `ConstraintLayout`.
 4. **Кастомный BottomAppBar**: Панель навигации оформлена с вырезом `CircleShape` и подложкой `Surface`, предотвращающей наложение системной навигации на кликабельные элементы.
 
