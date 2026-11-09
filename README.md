@@ -39,7 +39,7 @@
 Ниже представлена демонстрация работы интерфейса приложения и навигации:
 
 <div align="center">
-  <img src="demo/CoursesApp.gif" alt="Демонстрация работы CoursesApp" width="300"/>
+  <img src="demo/CoursesApp.gif" alt="Демонстрация работы CoursesApp" width="220"/>
 </div>
 
 ---
