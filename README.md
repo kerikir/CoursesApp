@@ -73,7 +73,7 @@
 Для получения исходного кода выполните команду в терминале:
 
 ```bash
-git clone https://github.com/vlasov/CoursesApp.git
+git clone https://github.com/kerikir/CoursesApp.git
 cd CoursesApp
 ```
 
@@ -102,5 +102,5 @@ cd CoursesApp
 ### 📦 Скачать готовый APK (Release v1.0.0)
 
 Готовая сборка версии **v1.0.0** доступна в разделе релизов проекта:
-- [Релиз v1.0.0 (APK)](https://github.com/vlasov/CoursesApp/releases/tag/v1.0.0)
-- Локальный путь релизной сборки после 빌да: `app/build/outputs/apk/release/app-release-unsigned.apk`
+- [Релиз v1.0.0 (APK)](https://github.com/CoursesApp/releases/tag/v1.0.0)
+- Локальный путь релизной сборки: `app/build/outputs/apk/release/app-release-unsigned.apk`
