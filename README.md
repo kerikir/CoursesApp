@@ -46,9 +46,9 @@
 
 ## 📱 Скриншоты
 
-| Главный экран |  Поиск курса в панели поиска | Смена раздела в панели навигации | Иконка приложения |
-| :---: |:---:| :---: | :---: |
-| <img src="screenshots/main_screen_course.png" width="200" alt="Главный экран"/> | <img src="screenshots/search_course.png" width="200" alt="Поиск курса"/> | <img src="screenshots/navigation_course.png" width="200" alt="Смена раздела"/> | <img src="screenshots/app_icon_course.png" width="150" alt="Иконка приложения"/> |
+| Главный экран |  Поиск курса в панели поиска | Смена раздела в панели навигации |                                Иконка приложения                                |
+| :---: |:---:| :---: |:-------------------------------------------------------------------------------:|
+| <img src="screenshots/main_screen_course.png" width="200" alt="Главный экран"/> | <img src="screenshots/search_course.png" width="200" alt="Поиск курса"/> | <img src="screenshots/navigation_course.png" width="200" alt="Смена раздела"/> | <img src="screenshots/app_icon_course.png" width="80" alt="Иконка приложения"/> |
 
 ---
 
@@ -100,5 +100,5 @@ cd CoursesApp
 ### 📦 Скачать готовый APK (Release v1.0.0)
 
 Готовая сборка версии **v1.0.0** доступна в разделе релизов проекта:
-- [Релиз v1.0.0 (APK)](https://github.com/CoursesApp/releases/tag/v1.0.0)
+- [Релиз v1.0.0 (APK)](https://github.com/kerikir/CoursesApp/releases/tag/v1.0.0)
 - Локальный путь релизной сборки: `app/build/outputs/apk/release/app-release-unsigned.apk`
