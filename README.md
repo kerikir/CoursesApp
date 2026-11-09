@@ -1,4 +1,4 @@
-# 🎓 CoursesApp — Мобильное приложение для онлайн-обучения
+# 🎓 CoursesApp — Мобильное UI-приложение для онлайн-обучения
 
 [![Android](https://img.shields.io/badge/Platform-Android-green.svg?style=flat&logo=android)](https://www.android.com/)
 [![Kotlin](https://img.shields.io/badge/Language-Kotlin-purple.svg?style=flat&logo=kotlin)](https://kotlinlang.org/)
